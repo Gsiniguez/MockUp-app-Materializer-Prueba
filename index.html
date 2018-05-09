@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -15,44 +16,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title class="red.accent-1">Document</title>
-
-
+    <script language="javascript" type="text/javascript">
+        function enviar(pagina) {
+            document.nombreDelFormulario.action = pagina;
+            document.nombreDelFormulario.submit();
+        }
+    </script>
 
 </head>
 
 <body>
     <div class="container">
-        <div class="chips">
-            <div class="row">
-                <h5 class="center">Ingresar Dinero</h5>
-                <div class="col s10">
-                    <input placeholder="Ingresar Plata $$$" type="text">
-                </div>
-                <div class="col s2">
-                    <button class="btn-floating btn-large waves-effect waves-light red">
-                        <i class="material-icons">done</i>
-                    </button>
-                </div>
+
+        <div class="row">
+            <h5 class="center">Ingresar Dinero</h5>
+            <div class="col s10">
+                <input placeholder="$$$ MONTO $$$" type="text">
+            </div>
+            <div class="col s2">
+                <button class="btn-floating btn-large waves-effect waves-light red">
+                    <i class="material-icons">done</i>
+
+                </button>
+
             </div>
         </div>
 
+        <hr>
 
         <h5 class="center">CAJAS</h5>
         <div class="collection">
             <div class="row">
                 <p class="col s12">
-                    <button class="btn-floating btn-large waves-effect waves-light red">
+                    <li>CAJA IphoneX:$32000</li>
+                    <button button class="btn-floating btn-large waves-effect waves-light red" type="button" onClick="enviar('addcaja.html')">
                         <i class="material-icons">add</i>
                     </button>
+
                 </p>
             </div>
         </div>
 
         <div>
-            <button class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">money_off</i>
-
+            <form name="nombreDelFormulario" action="" method="post">
+                <button class="btn-floating btn-large waves-effect waves-light red" type="button" onClick="enviar('gastos.html')">
+                    <i class="material-icons">money_off</i>
+                </button>
+                <button  class="btn-floating btn-large waves-effect waves-light red" type="button" onClick="enviar('trofeos.html')">
+                    <i class="material-icons">stars</i>
+                </button>
+            </form>
         </div>
+    </div>
+
 
 </body>
 
